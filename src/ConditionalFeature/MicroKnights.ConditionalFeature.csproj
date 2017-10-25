@@ -4,6 +4,15 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <RootNamespace>MicroKnights.ConditionalFeature</RootNamespace>
     <AssemblyName>MicroKnights.ConditionalFeature</AssemblyName>
+    
+    <PackageId>MicroKnights.ConditionalFeature</PackageId>
+    <PackageVersion>1.0.0-alpha</PackageVersion>
+    <Authors>Frank Løvendahl Nielsen</Authors>
+    <Description>Easy way to toggle features use configurable or runtime conditions</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <Copyright>Copyright 2017 (c) MicroKnights. All rights reserved.</Copyright>
+    <PackageTags>Feature Condition Toggle</PackageTags>
   </PropertyGroup>
 
 </Project>
