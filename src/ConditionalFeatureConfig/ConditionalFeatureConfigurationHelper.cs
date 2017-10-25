@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace MicroKnights.ConditionalFeature.Configuation
+namespace MicroKnights.ConditionalFeature.Configuration
 {
     public static class ConditionalFeatureConfigurationHelper
     {

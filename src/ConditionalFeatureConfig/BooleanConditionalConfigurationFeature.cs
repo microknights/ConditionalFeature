@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Configuration;
 
-namespace MicroKnights.ConditionalFeature.Configuation
+namespace MicroKnights.ConditionalFeature.Configuration
 {
     public abstract class BooleanConditionalConfigurationFeature : BooleanConditionalFeature
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using MicroKnights.ConditionalFeature.Configuation;
+using MicroKnights.ConditionalFeature.Configuration;
 using Microsoft.Extensions.Configuration;
 using Xunit;
 

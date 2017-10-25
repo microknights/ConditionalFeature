@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using MicroKnights.ConditionalFeature.Configuation;
+using MicroKnights.ConditionalFeature.Configuration;
 using Microsoft.Extensions.Configuration;
 using Xunit;
 
@@ -123,7 +123,6 @@ namespace MicroKnights.ConditionalFeature.Test
                 .SetBasePath(Path.GetDirectoryName(GetType().Assembly.Location))
                 .AddJsonFile("appsettings.json");
             var config = builder.Build();
-
 
             var rootGreen = new MyConfigurationRootGreenEnumFeature(config);
             Assert.True(rootGreen.Is(MyColorEnum.Green), $"{rootGreen.GetType().Name} failed");

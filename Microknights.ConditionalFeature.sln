@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroKnights.ConditionalFeature", "src\ConditionalFeature\MicroKnights.ConditionalFeature.csproj", "{5C06FC3B-6982-4B2D-A8EB-E20A1002AEB0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroKnights.ConditionalFeature.Configuation", "src\ConditionalFeatureConfig\MicroKnights.ConditionalFeature.Configuation.csproj", "{A93995EE-306B-4FFE-8ADC-EFF471EBB33C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroKnights.ConditionalFeature.Configuration", "src\ConditionalFeatureConfig\MicroKnights.ConditionalFeature.Configuration.csproj", "{A93995EE-306B-4FFE-8ADC-EFF471EBB33C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroKnights.ConditionalFeature.Test", "test\MicroKnights.ConditionalFeature.Test.csproj", "{C73B9460-5C70-42ED-B5EC-80C425A785B6}"
 EndProject

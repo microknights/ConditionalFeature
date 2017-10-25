@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\ConditionalFeatureConfig\MicroKnights.ConditionalFeature.Configuation.csproj" />
+    <ProjectReference Include="..\src\ConditionalFeatureConfig\MicroKnights.ConditionalFeature.Configuration.csproj" />
     <ProjectReference Include="..\src\ConditionalFeature\MicroKnights.ConditionalFeature.csproj" />
   </ItemGroup>
 
