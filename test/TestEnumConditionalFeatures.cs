@@ -16,6 +16,7 @@ namespace MicroKnights.ConditionalFeature.Test
             Transparent
         }
 
+        #region  MyCustom... test classes
         private class MyCustomEnumConditionalRedFeature : EnumConditionalFeature<MyColorEnum>
         {
             public MyCustomEnumConditionalRedFeature(MyColorEnum defaultValue = default(MyColorEnum)) : base(defaultValue)
@@ -93,7 +94,7 @@ namespace MicroKnights.ConditionalFeature.Test
                 : base(configuration, defaultValue)
             { }
         }
-
+#endregion
 
         [Fact]
         public void TestCustomOverrideFeatures()

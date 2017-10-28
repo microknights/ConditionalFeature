@@ -9,12 +9,13 @@ namespace MicroKnights.ConditionalFeature.Test
 {
     public class TestBooleanConditionalFeatures
     {
-        private class MyCustomBooleanConditionalTrueFeature : BooleanConditionalFeature
+        #region  MyCustom... test classes
+        private class MyCustomOverrideBooleanConditionalTrueFeature : BooleanConditionalFeature
         {
-            public MyCustomBooleanConditionalTrueFeature() 
+            public MyCustomOverrideBooleanConditionalTrueFeature() 
             {}
 
-            public MyCustomBooleanConditionalTrueFeature(Func<bool> funcResolveValue, bool defaultValue = default(bool)) : base(funcResolveValue, defaultValue)
+            public MyCustomOverrideBooleanConditionalTrueFeature(Func<bool> funcResolveValue, bool defaultValue = default(bool)) : base(funcResolveValue, defaultValue)
             {}
 
             protected override bool ResolveFeatureValue()
@@ -22,12 +23,12 @@ namespace MicroKnights.ConditionalFeature.Test
                 return true;
             }
         }
-        private class MyCustomBooleanConditionalFalseFeature : BooleanConditionalFeature
+        private class MyCustomOverrideBooleanConditionalFalseFeature : BooleanConditionalFeature
         {
-            public MyCustomBooleanConditionalFalseFeature() 
-            {}
+            public MyCustomOverrideBooleanConditionalFalseFeature()
+            { }
 
-            public MyCustomBooleanConditionalFalseFeature(Func<bool> funcResolveValue, bool defaultValue = default(bool)) : base(funcResolveValue, defaultValue)
+            public MyCustomOverrideBooleanConditionalFalseFeature(Func<bool> funcResolveValue, bool defaultValue = default(bool)) : base(funcResolveValue, defaultValue)
             {
             }
 
@@ -35,6 +36,20 @@ namespace MicroKnights.ConditionalFeature.Test
             {
                 return false;
             }
+        }
+
+        private class MyCustomConstructorBooleanConditionalTrueFeature : BooleanConditionalFeature
+        {
+            public MyCustomConstructorBooleanConditionalTrueFeature()
+                : base(true)
+            { }
+        }
+
+        private class MyCustomConstructorBooleanConditionalFalseFeature : BooleanConditionalFeature
+        {
+            public MyCustomConstructorBooleanConditionalFalseFeature()
+                : base(false)
+            { }
         }
 
         private class MyConfigurationRootTrueBooleanFeature : BooleanConditionalConfigurationFeature
@@ -81,24 +96,35 @@ namespace MicroKnights.ConditionalFeature.Test
                 : base(configuration, defaultValue)
             { }
         }
+        #endregion
 
         [Fact]
         public void TestCustomOverrideFeatures()
         {
-            var customTrue = new MyCustomBooleanConditionalTrueFeature();
+            var customTrue = new MyCustomOverrideBooleanConditionalTrueFeature();
             Assert.True(customTrue.IsEnabled, $"{customTrue.GetType().Name} failed");
 
-            var customFalse = new MyCustomBooleanConditionalFalseFeature();
+            var customFalse = new MyCustomOverrideBooleanConditionalFalseFeature();
+            Assert.True(customFalse.IsDisabled, $"{customFalse.GetType().Name} failed");
+        }
+
+        [Fact]
+        public void TestCustomConstructorFeatures()
+        {
+            var customTrue = new MyCustomConstructorBooleanConditionalTrueFeature();
+            Assert.True(customTrue.IsEnabled, $"{customTrue.GetType().Name} failed");
+
+            var customFalse = new MyCustomConstructorBooleanConditionalFalseFeature();
             Assert.True(customFalse.IsDisabled, $"{customFalse.GetType().Name} failed");
         }
 
         [Fact]
         public void TestCustomDelegateFeatures()
         {
-            var customDelegateTrue = new MyCustomBooleanConditionalFalseFeature(() => true);
+            var customDelegateTrue = new MyCustomOverrideBooleanConditionalFalseFeature(() => true);
             Assert.True(customDelegateTrue.IsEnabled, $"{customDelegateTrue.GetType().Name} delegate failed");
 
-            var customDelegateFalse = new MyCustomBooleanConditionalTrueFeature(() => false);
+            var customDelegateFalse = new MyCustomOverrideBooleanConditionalTrueFeature(() => false);
             Assert.True(customDelegateFalse.IsDisabled, $"{customDelegateFalse.GetType().Name} delegate failed");
         }
 
