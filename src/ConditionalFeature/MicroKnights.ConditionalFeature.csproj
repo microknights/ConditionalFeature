@@ -6,7 +6,7 @@
     <AssemblyName>MicroKnights.ConditionalFeature</AssemblyName>
     
     <PackageId>MicroKnights.ConditionalFeature</PackageId>
-    <PackageVersion>1.0.0-alpha</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <Authors>Frank Løvendahl Nielsen</Authors>
     <Description>Easy way to toggle features use configurable or runtime conditions</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
