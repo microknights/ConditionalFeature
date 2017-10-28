@@ -2,7 +2,7 @@
 
 ## How do i get started?
 
-Inherit one of the ConditionalFeatures; BooleanConditionalFeature or EnumConditionalFeature (more to come). Three approaches can be used with the FeatueToggles.
+Inherit one of the ConditionalFeatures; BooleanConditionalFeature or EnumConditionalFeature (more to come). Three approaches can be used with the a ConditionalFeature.
 
  - Set the value directly on instantiating, or override ResolveFeatureValue().
  - Provide a Func. This will be called every time the ConditionalFeature is queried. The Func controls the thread safety.
@@ -31,7 +31,7 @@ Inherit one of the ConditionalFeatures; BooleanConditionalFeature or EnumConditi
         // do enabled stuff...
     });
     featureDiagnostics.OnDisabled( () => {
-        // do enabled stuff...
+        // do disabled stuff...
     });
 
 or
@@ -40,7 +40,7 @@ or
     public class GodUserFeature : BooleanConditionalFeature
     {
         public GodUserFeature(Func<bool> func)
-            : base(func,false)
+            : base(func)
         {}
     }
 
@@ -55,7 +55,7 @@ or
     
 or
 
-    // Using Lazy, called once on first hit.    
+    // Using Lazy, that is  called once on first hit.    
     public class LicenseFeature : BooleanConditionalFeature
     {
         public LicenseFeature(Lazy<bool> lazy)
@@ -80,10 +80,9 @@ Recommends use of DependencyInjection to request you ConditionalFeatures through
 
 `PM> Install-Package MicroKnights.ConditionalFeature`
 
-See also Package `MicroKnights.ConditionalFeature.Configuration` (Soon comming) for using appsettings.config to configure the ConditionalFeatures.
+See also Package `MicroKnights.ConditionalFeature.Configuration` for using appsettings.config to configure the ConditionalFeatures.
 
+### Test / Samples
+Look in the Test project for more samples, including EnumConditionalFeature!
 
-# Test, not currently working
-*Waiting for a Resharper Fix to run xUnit on dotnetcore v2.0 projects*
-
-ConditionalFeature is Copyright © 2017 MicroKnights and is entirely free to use.
+ConditionalFeature is Copyright © 2017 MicroKnights / Frank L&oslash;vendahl Nielsen and is entirely free to use.
