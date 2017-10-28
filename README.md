@@ -2,7 +2,15 @@
 
 ## How do i get started?
 
-Inherit one of the ConditionalFeatures; BooleanConditionalFeature or EnumConditionalFeature (more to come). Three approaches can be used with the a ConditionalFeature.
+Inherit one of the ConditionalFeatures;
+
+ - BooleanConditionalFeature
+ - EnumConditionalFeature
+ - DateTimeConditionFeature
+
+   *or make your own simple and easy*
+
+ Three approaches can be used to implement a ConditionalFeature.
 
  - Set the value directly on instantiating, or override ResolveFeatureValue().
  - Provide a Func. This will be called every time the ConditionalFeature is queried. The Func controls the thread safety.
@@ -83,6 +91,6 @@ Recommends use of DependencyInjection to request you ConditionalFeatures through
 See also Package `MicroKnights.ConditionalFeature.Configuration` for using appsettings.config to configure the ConditionalFeatures.
 
 ### Test / Samples
-Look in the Test project for more samples, including EnumConditionalFeature!
+Look in the Test project for more samples, including EnumConditionalFeature and DateTimeConditionalFeature!
 
 ConditionalFeature is Copyright © 2017 MicroKnights / Frank L&oslash;vendahl Nielsen and is entirely free to use.
