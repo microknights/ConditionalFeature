@@ -35,7 +35,7 @@ namespace MicroKnights.ConditionalFeature
             _lazyValueResolver = lazyResolveValue;
         }
 
-        protected virtual TValue FeatureValue
+        public virtual TValue FeatureValue
         {
             get
             {
