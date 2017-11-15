@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp1.0</TargetFramework>
     <RootNamespace>MicroKnights.ConditionalFeature</RootNamespace>
     <AssemblyName>MicroKnights.ConditionalFeature</AssemblyName>
     
@@ -9,12 +9,13 @@
     <Authors>Frank Løvendahl Nielsen</Authors>
     <Description>Easy way to determine features using configurable or runtime conditions</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Added DateTimeConditionalFeature</PackageReleaseNotes>
+    <PackageReleaseNotes>Downgraded to .Net Core 1.0 / .Net Standard 1.0</PackageReleaseNotes>
     <Copyright>Copyright 2017 (c) MicroKnights. All rights reserved.</Copyright>
     <PackageTags>Feature Condition Toggle</PackageTags>
     <RepositoryUrl>https://github.com/microknights/ConditionalFeature</RepositoryUrl>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <RepositoryType>git</RepositoryType>
+    <ProjectUrl></ProjectUrl>
   </PropertyGroup>
 
 </Project>

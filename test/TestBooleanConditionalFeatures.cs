@@ -133,7 +133,7 @@ namespace MicroKnights.ConditionalFeature.Test
         {
 
             var builder = new ConfigurationBuilder()
-                .SetBasePath(Path.GetDirectoryName(GetType().Assembly.Location))
+                .SetBasePath(Path.GetDirectoryName(GetType().GetTypeInfo().Assembly.Location))
                 .AddJsonFile("appsettings.json");
             var config = builder.Build();
 

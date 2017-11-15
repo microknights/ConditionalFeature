@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using MicroKnights.ConditionalFeature.Configuration;
 using Microsoft.Extensions.Configuration;
 using Xunit;
@@ -121,7 +122,7 @@ namespace MicroKnights.ConditionalFeature.Test
         {
 
             var builder = new ConfigurationBuilder()
-                .SetBasePath(Path.GetDirectoryName(GetType().Assembly.Location))
+                .SetBasePath(Path.GetDirectoryName(GetType().GetTypeInfo().Assembly.Location))
                 .AddJsonFile("appsettings.json");
             var config = builder.Build();
 

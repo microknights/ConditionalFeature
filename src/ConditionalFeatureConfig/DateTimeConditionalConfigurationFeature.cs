@@ -18,7 +18,7 @@ namespace MicroKnights.ConditionalFeature.Configuration
             _configuration = configuration;
             _defaultSet = defaultValue.HasValue;
 
-            FormatProvider = Thread.CurrentThread.CurrentCulture;
+            FormatProvider = CultureInfo.CurrentCulture;
             DateTimeStyles = DateTimeStyles.None;
         }
 
