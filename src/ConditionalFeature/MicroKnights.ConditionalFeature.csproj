@@ -1,19 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netstandard1.0</TargetFramework>
     <RootNamespace>MicroKnights.ConditionalFeature</RootNamespace>
     <AssemblyName>MicroKnights.ConditionalFeature</AssemblyName>
     
     <PackageId>MicroKnights.ConditionalFeature</PackageId>
+    <PackageTitle>MicroKnights.ConditionalFeature</PackageTitle>
     <Authors>Frank Løvendahl Nielsen</Authors>
     <Description>Easy way to determine features using configurable or runtime conditions</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Downgraded to .Net Core 1.0 / .Net Standard 1.0</PackageReleaseNotes>
+    <PackageReleaseNotes>.Net Standard 1.0 Compliant</PackageReleaseNotes>
     <Copyright>Copyright 2017 (c) MicroKnights. All rights reserved.</Copyright>
     <PackageTags>Feature Condition Toggle</PackageTags>
+    <ProjectUrl>https://github.com/microknights/ConditionalFeature</ProjectUrl>
     <RepositoryUrl>https://github.com/microknights/ConditionalFeature</RepositoryUrl>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
     <RepositoryType>git</RepositoryType>
     <ProjectUrl></ProjectUrl>
   </PropertyGroup>
